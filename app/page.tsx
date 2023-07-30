@@ -3,7 +3,7 @@ import {CVButton} from "@/components/cv-button";
 
 export default function Home() {
     return (
-        <main className="flex container">
+        <main className="sm:flex container">
             <aside className="flex-col">
                 <section className="mb-8">
                     <h1 className="text-2xl font-bold mb-2">Yanis Vestfalskii</h1>
