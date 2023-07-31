@@ -1,9 +1,10 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import {AmplitudeProvider} from "@/app/providers";
+import { AmplitudeProvider } from "@/app/providers"
 import { ThemeProvider } from "@/components/theme-provider"
-import {Header} from "@/components/header";
+import { Header } from "@/components/header"
+import { Analytics } from "@vercel/analytics/react"
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -25,6 +26,7 @@ export default function RootLayout({
                 <Header />
                 {children}
             </ThemeProvider>
+        <Analytics />
         </body>
       </AmplitudeProvider>
     </html>

@@ -1,9 +1,14 @@
 import {ExternalLink, Github, Linkedin} from "lucide-react";
 import {CVButton} from "@/components/cv-button";
+import {articles, projects, experience} from "@/lib/data";
+import {ArticleLink} from "@/components/article-link";
+import {ProjectLink} from "@/components/project-link";
+import {SocialLinks} from "@/components/social-links";
+import {PrevExperience} from "@/components/prev-experience";
 
 export default function Home() {
     return (
-        <main className="sm:flex container">
+        <main className="flex flex-col sm:flex-row container gap-y-8">
             <aside className="flex-col">
                 <section className="mb-8">
                     <h1 className="text-2xl font-bold mb-2">Yanis Vestfalskii</h1>
@@ -11,46 +16,33 @@ export default function Home() {
                 </section>
                 <section className="mb-8">
                     <h3 className="text-lg font-semibold mb-2">Articles</h3>
-                    <ul className="flex flex-col">
-                        <li className="space-y-1.5">
-                            <a className="!no-underline"
-                               href="https://medium.com/@yanisneverlies/leveling-up-practices-every-react-developer-should-know-memoization-80cf693f456d"
-                               target="_blank">
-                                <span className="flex font-medium underline underline-offset-4 text-sm">
-                                    Practices every React developer should know: Memoization<ExternalLink
-                                    className="ml-1" size={12}/>
-                                </span>
-                            </a>
-                        </li>
+                    <ul className="flex flex-col space-y-2">
+                        {articles.map((article) => (
+                            <li className="space-y-1.5" key={article.id}>
+                                <ArticleLink {...article} />
+                            </li>
+                        ))}
                     </ul>
                 </section>
                 <section className="mb-8">
                     <h3 className="text-lg font-semibold mb-2">Projects</h3>
-                    <ul className="flex flex-col">
-                        <li className="space-y-1.5">
-                            <a className="!no-underline"
-                               href="#"
-                               target="_blank">
-                                <span className="flex font-medium underline underline-offset-4 text-sm">
-                                    🚧 React patterns
-                                </span>
-                            </a>
-                            <p className="text-muted-foreground text-sm">A database with infographics about different React patterns with production examples</p>
-                        </li>
+                    <ul className="flex flex-col space-y-2">
+                        {projects.map((project) => (
+                            <li key={project.id} className="space-y-1.5">
+                                <ProjectLink {...project} />
+                            </li>
+                        ))}
                     </ul>
                 </section>
                 <CVButton/>
-                <div className="flex gap-x-3">
-                    <a href="https://github.com/yanisneverlies" target="_blank" className="text-lg font-bold">
-                        <Github size={20}/>
-                    </a>
-                    <a href="https://www.linkedin.com/in/yanisneverlies/" target="_blank" className="text-lg font-bold">
-                        <Linkedin size={20}/>
-                    </a>
-                </div>
+                <SocialLinks/>
             </aside>
-            <section>
-                Content
+            <section className="overflow-y-auto">
+                <h3 className="text-lg font-semibold mb-2">Full-time Experience</h3>
+                {experience.map((workExperience) => (
+                    <PrevExperience key={workExperience.id} {...workExperience} />
+                ))}
+                <h3 className="text-lg font-semibold mb-2">Side Projects</h3>
             </section>
         </main>
     )
