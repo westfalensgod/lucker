@@ -30,8 +30,8 @@ export interface WorkExperience {
     title: string
     companyName: string
     description: string[]
-    startDate: string
-    endDate: string
+    startDate: Date
+    endDate?: Date
     technologies: string[]
 }
 
@@ -40,11 +40,10 @@ export const experience: WorkExperience[] = [{
     title: "Frontend Engineer",
     companyName: "ZoomTools",
     description: [
-        'Developed and maintained a variety of projects, with a focus on React, Redux, Webpack, React Native, and Next.js.',
-        'Built web applications from scratch, transforming Figma mockups into fully functional pages and components using React and Next.js.'
+        'Developed and maintained a variety of projects, with a focus on React, Redux, Webpack, React Native, and Next.js. Built web applications from scratch, transforming Figma mockups into fully functional pages and components using React and Next.js.'
     ],
-    startDate: "01.10.2017",
-    endDate: "01.03.2019",
+    startDate: new Date("October 1, 2017"),
+    endDate: new Date("March 1, 2019"),
     technologies: ["JavaScript", "React", "Redux", "Webpack", "React Native", "Next.js"]
 },
     {
@@ -52,11 +51,10 @@ export const experience: WorkExperience[] = [{
         title: "Middle Frontend Engineer",
         companyName: "Tennisi",
         description: [
-            'Transitioned the application from JavaScript to TypeScript and implemented Immutable.js to significantly improve data structure handling speed.',
-            'Collaborated with the backend team to rewrite and restructure the API for better performance and optimized frontend data processing.'
+            'Transitioned the application from JavaScript to TypeScript and implemented Immutable.js to significantly improve data structure handling speed. Collaborated with the backend team to rewrite and restructure the API for better performance and optimized frontend data processing.'
         ],
-        startDate: "01.06.2019",
-        endDate: "01.05.2021",
+        startDate: new Date("June 1, 2019"),
+        endDate: new Date("May 1, 2021"),
         technologies: ["TypeScript", "React", "Redux", "Webpack", "Immutable.js"]
     },
     {
@@ -64,12 +62,19 @@ export const experience: WorkExperience[] = [{
         title: "Team Lead / Senior Software Engineer",
         companyName: "Grid Dynamics",
         description: [
-            "Led a team of 10 engineers to revamp an outdated warehouse planogram app, reducing load speed from several minutes to hundreds of milliseconds.",
-            "Utilized webpack module federation to seamlessly integrate the app within a larger warehouse ecosystem.",
+            "Led a team of 10 engineers to revamp an outdated warehouse planogram app, reducing load speed from several minutes to hundreds of milliseconds. Utilized webpack module federation to seamlessly integrate the app within a larger warehouse ecosystem.",
             "Guided a team of 4 engineers in successfully transitioning an eCommerce marketplace application from client-side to server-side, resulting in remarkable improvements in page speed loading. Achieved a boost from 16 to 65 points on desktop and a remarkable increase from 1 to 35 on mobile devices.",
-            "Prepared a strategy to migrate website from the old app to a new app utilizing AWS load balancer."
         ],
-        startDate: "01.05.2021",
-        endDate: "01.07.2023",
+        startDate: new Date("May 1, 2021"),
+        endDate: new Date("July 1, 2023"),
         technologies: ["TypeScript", "React", "Redux", "AWS", "Next.js"]
-    },]
+    },
+    // {
+    //     id: 4,
+    //     title: "Lead Frontend Engineer",
+    //     companyName: "Holland & Barrett",
+    //     description: [],
+    //     startDate: new Date("August 1, 2023"),
+    //     technologies: ["TypeScript", "React", "Next.js", "Tailwind"]
+    // }
+]

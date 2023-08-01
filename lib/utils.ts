@@ -16,6 +16,6 @@ export function getCurrentWorkingExperience() {
   const months = periodInMonths % 12
   const yearsText = years > 0 ? `${years} ${years > 1 ? 'years' : 'year'}` : ''
   const monthsText = months > 0 ? `${months} ${months > 1 ? 'months' : 'month'}` : ''
-
+    console.log(yearsText, months)
     return `${yearsText} ${monthsText}`
 }
