@@ -12,7 +12,7 @@ export const ProjectLink = memo(({ title, link, description }: Project) => {
 
     return (
         <>
-            <a className="!no-underline" href={link} onClick={handleClick}>
+            <a className="!no-underline inline-block" href={link} onClick={handleClick}>
                 <span className="flex font-medium underline underline-offset-4 text-sm">
                     {title}
                 </span>

@@ -1,6 +1,6 @@
 import {ExternalLink, Github, Linkedin} from "lucide-react";
 import {CVButton} from "@/components/cv-button";
-import {articles, projects, experience} from "@/lib/data";
+import {articles, projects, experience, sideProjects} from "@/lib/data";
 import {ArticleLink} from "@/components/article-link";
 import {ProjectLink} from "@/components/project-link";
 import {SocialLinks} from "@/components/social-links";
@@ -30,16 +30,21 @@ export default function Home() {
                     <h3 className="text-lg font-semibold mb-2">Projects</h3>
                     <ul className="flex flex-col space-y-2">
                         {projects.map((project) => (
-                            <li key={project.id} className="space-y-1.5">
+                            <li key={project.id} className="inline-block space-y-1.5">
                                 <ProjectLink {...project} />
                             </li>
                         ))}
                     </ul>
                 </section>
+                <section className="mb-8">
+                    <h3 className="text-lg font-semibold mb-2">About</h3>
+                    <p className="text-sm">This site is built with <a className="font-medium underline underline-offset-4 text-sm" href="https://nextjs.org/" target="_blank">Next.js</a>, <a className="font-medium underline underline-offset-4 text-sm" href="https://tailwindcss.com/
+                    " target="_blank">Tailwind CSS</a> and <a className="font-medium underline underline-offset-4 text-sm" href="https://ui.shadcn.com/" target="_blank">shadcn UI</a>. Deployed with <a className="font-medium underline underline-offset-4 text-sm" href="https://vercel.com/" target="_blank">Vercel</a>. Code for this website is <a className="font-medium underline underline-offset-4 text-sm" href="https://github.com/yanisneverlies/lucker" target="_blank">open-source</a>.</p>
+                </section>
                 <CVButton/>
                 <SocialLinks/>
             </aside>
-            <section className="flex flex-col overflow-y-auto">
+            <section className="flex flex-col sm:overflow-y-scroll sm:overscroll-none sm:h-screen sm:pb-20">
                 <h3 className="text-lg font-semibold mb-2">Full-time Experience ({getCurrentWorkingExperience()})</h3>
                 {experience.sort((a, b) => {
                     return dayjs(a.startDate) > dayjs(b.startDate) ? -1 : 1
@@ -47,6 +52,11 @@ export default function Home() {
                     <PrevExperience key={workExperience.id} {...workExperience} />
                 ))}
                 <h3 className="text-lg font-semibold mb-2">Side Projects</h3>
+                {sideProjects.sort((a, b) => {
+                    return dayjs(a.startDate) > dayjs(b.startDate) ? -1 : 1
+                }).map((sideProject) => (
+                    <PrevExperience key={sideProject.id} {...sideProject} />
+                ))}
             </section>
         </main>
     )

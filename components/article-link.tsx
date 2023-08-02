@@ -10,7 +10,7 @@ export const ArticleLink = memo(({ title, link }: Article) => {
     }
 
     return (
-        <a className="!no-underline" href={link} target="_blank" onClick={handleClick}>
+        <a className="!no-underline inline-block" href={link} target="_blank" onClick={handleClick}>
             <span className="flex font-medium underline underline-offset-4 text-sm">
                 {title}
             </span>
