@@ -39,7 +39,7 @@ export default function Home() {
                 <section className="mb-8">
                     <h3 className="text-lg font-semibold mb-2">About</h3>
                     <p className="text-sm">This site is built with <a className="font-medium underline underline-offset-4 text-sm" href="https://nextjs.org/" target="_blank">Next.js</a>, <a className="font-medium underline underline-offset-4 text-sm" href="https://tailwindcss.com/
-                    " target="_blank">Tailwind CSS</a> and <a className="font-medium underline underline-offset-4 text-sm" href="https://ui.shadcn.com/" target="_blank">shadcn UI</a>. Deployed with <a className="font-medium underline underline-offset-4 text-sm" href="https://vercel.com/" target="_blank">Vercel</a>. Code for this website is <a className="font-medium underline underline-offset-4 text-sm" href="https://github.com/yanisneverlies/lucker" target="_blank">open-source</a>.</p>
+                    " target="_blank">Tailwind CSS</a> and <a className="font-medium underline underline-offset-4 text-sm" href="https://ui.shadcn.com/" target="_blank">shadcn UI</a>. Deployed with <a className="font-medium underline underline-offset-4 text-sm" href="https://vercel.com/" target="_blank">Vercel</a>. The source code is available on <a className="font-medium underline underline-offset-4 text-sm" href="https://github.com/yanisneverlies/lucker" target="_blank">GitHub</a>.</p>
                 </section>
                 <CVButton/>
                 <SocialLinks/>
