@@ -7,6 +7,7 @@ import {SocialLinks} from "@/components/social-links";
 import {PrevExperience} from "@/components/prev-experience";
 import dayjs from "dayjs";
 import {getCurrentWorkingExperience} from "@/lib/utils";
+import {ScrollArea} from "@/components/ui/scroll-area";
 
 export default function Home() {
     return (
@@ -39,25 +40,32 @@ export default function Home() {
                 <section className="mb-8">
                     <h3 className="text-lg font-semibold mb-2">About</h3>
                     <p className="text-sm">This site is built with <a className="font-medium underline underline-offset-4 text-sm" href="https://nextjs.org/" target="_blank">Next.js</a>, <a className="font-medium underline underline-offset-4 text-sm" href="https://tailwindcss.com/
-                    " target="_blank">Tailwind CSS</a> and <a className="font-medium underline underline-offset-4 text-sm" href="https://ui.shadcn.com/" target="_blank">shadcn UI</a>. Deployed with <a className="font-medium underline underline-offset-4 text-sm" href="https://vercel.com/" target="_blank">Vercel</a>. Code for this website is <a className="font-medium underline underline-offset-4 text-sm" href="https://github.com/yanisneverlies/lucker" target="_blank">open-source</a>.</p>
+                    " target="_blank">Tailwind CSS</a> and <a className="font-medium underline underline-offset-4 text-sm" href="https://ui.shadcn.com/" target="_blank">shadcn UI</a>. Deployed with <a className="font-medium underline underline-offset-4 text-sm" href="https://vercel.com/" target="_blank">Vercel</a>. The source code is available on <a className="font-medium underline underline-offset-4 text-sm" href="https://github.com/yanisneverlies/lucker" target="_blank">GitHub</a>.</p>
                 </section>
                 <CVButton/>
                 <SocialLinks/>
             </aside>
-            <section className="flex flex-col sm:overflow-y-scroll sm:overscroll-none sm:h-screen sm:pb-20">
+
+            <ScrollArea className="flex flex-col">
                 <h3 className="text-lg font-semibold mb-2">Full-time Experience ({getCurrentWorkingExperience()})</h3>
-                {experience.sort((a, b) => {
-                    return dayjs(a.startDate) > dayjs(b.startDate) ? -1 : 1
-                }).map((workExperience) => (
-                    <PrevExperience key={workExperience.id} {...workExperience} />
-                ))}
+                {experience
+                    .sort((a, b) => {
+                        return dayjs(a.startDate) > dayjs(b.startDate) ? -1 : 1
+                    })
+                    .map((workExperience) => (
+                        <PrevExperience key={workExperience.id} {...workExperience} />
+                    ))
+                }
                 <h3 className="text-lg font-semibold mb-2">Side Projects</h3>
-                {sideProjects.sort((a, b) => {
-                    return dayjs(a.startDate) > dayjs(b.startDate) ? -1 : 1
-                }).map((sideProject) => (
-                    <PrevExperience key={sideProject.id} {...sideProject} />
-                ))}
-            </section>
+                {sideProjects
+                    .sort((a, b) => {
+                        return dayjs(a.startDate) > dayjs(b.startDate) ? -1 : 1
+                    })
+                    .map((sideProject) => (
+                        <PrevExperience key={sideProject.id} {...sideProject} />
+                    ))
+                }
+            </ScrollArea>
         </main>
     )
 }
