@@ -1,13 +1,13 @@
 import {ExternalLink, Github, Linkedin} from "lucide-react";
 import {CVButton} from "@/components/cv-button";
-import {articles, projects, experience, sideProjects} from "@/lib/data";
+import {articles, projects, experience, sideProjects} from "@/shared/lib/data";
 import {ArticleLink} from "@/components/article-link";
 import {ProjectLink} from "@/components/project-link";
 import {SocialLinks} from "@/components/social-links";
 import {PrevExperience} from "@/components/prev-experience";
 import dayjs from "dayjs";
-import {getCurrentWorkingExperience} from "@/lib/utils";
-import {ScrollArea} from "@/components/ui/scroll-area";
+import {getCurrentWorkingExperience} from "@/shared/lib/utils";
+import {ScrollArea} from "@/shared/ui/registry/scroll-area";
 
 export default function Home() {
     return (

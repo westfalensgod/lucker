@@ -1,6 +1,6 @@
 import { type ClassValue, clsx } from "clsx"
 import { twMerge } from "tailwind-merge"
-import {WorkExperience, experience} from "@/lib/data";
+import {WorkExperience, experience} from "@/shared/lib/data";
 import dayjs from "dayjs";
  
 export function cn(...inputs: ClassValue[]) {
