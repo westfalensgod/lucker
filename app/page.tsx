@@ -7,6 +7,7 @@ import {SocialLinks} from "@/components/social-links";
 import {PrevExperience} from "@/components/prev-experience";
 import dayjs from "dayjs";
 import {getCurrentWorkingExperience} from "@/lib/utils";
+import {ScrollArea} from "@/components/ui/scroll-area";
 
 export default function Home() {
     return (
@@ -44,20 +45,27 @@ export default function Home() {
                 <CVButton/>
                 <SocialLinks/>
             </aside>
-            <section className="flex flex-col sm:overflow-y-scroll sm:overscroll-none sm:h-screen sm:pb-20">
+
+            <ScrollArea className="flex flex-col">
                 <h3 className="text-lg font-semibold mb-2">Full-time Experience ({getCurrentWorkingExperience()})</h3>
-                {experience.sort((a, b) => {
-                    return dayjs(a.startDate) > dayjs(b.startDate) ? -1 : 1
-                }).map((workExperience) => (
-                    <PrevExperience key={workExperience.id} {...workExperience} />
-                ))}
+                {experience
+                    .sort((a, b) => {
+                        return dayjs(a.startDate) > dayjs(b.startDate) ? -1 : 1
+                    })
+                    .map((workExperience) => (
+                        <PrevExperience key={workExperience.id} {...workExperience} />
+                    ))
+                }
                 <h3 className="text-lg font-semibold mb-2">Side Projects</h3>
-                {sideProjects.sort((a, b) => {
-                    return dayjs(a.startDate) > dayjs(b.startDate) ? -1 : 1
-                }).map((sideProject) => (
-                    <PrevExperience key={sideProject.id} {...sideProject} />
-                ))}
-            </section>
+                {sideProjects
+                    .sort((a, b) => {
+                        return dayjs(a.startDate) > dayjs(b.startDate) ? -1 : 1
+                    })
+                    .map((sideProject) => (
+                        <PrevExperience key={sideProject.id} {...sideProject} />
+                    ))
+                }
+            </ScrollArea>
         </main>
     )
 }
