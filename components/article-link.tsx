@@ -1,6 +1,6 @@
 'use client'
 import * as amplitude from '@amplitude/analytics-browser'
-import {Article} from "@/lib/data";
+import {Article} from "@/shared/lib/data";
 import {memo} from "react";
 
 

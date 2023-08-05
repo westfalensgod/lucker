@@ -1,8 +1,8 @@
 import dayjs from 'dayjs'
-import {WorkExperience} from "@/lib/data";
-import {Badge} from "@/components/ui/badge";
+import {WorkExperience} from "@/shared/lib/data";
+import {Badge} from "@/shared/ui/registry/badge";
 import {BadgeCheck} from "lucide-react";
-import {TooltipWrapper} from "@/components/ui/tooltip-wrapper";
+import {TooltipWrapper} from "@/shared/ui/registry/tooltip-wrapper";
 
 
 export const PrevExperience = ({

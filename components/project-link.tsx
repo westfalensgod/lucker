@@ -1,7 +1,7 @@
 'use client'
 import {ExternalLink} from "lucide-react";
 import * as amplitude from '@amplitude/analytics-browser'
-import {Project} from "@/lib/data";
+import {Project} from "@/shared/lib/data";
 import {memo} from "react";
 
 

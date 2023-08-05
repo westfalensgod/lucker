@@ -1,6 +1,6 @@
 'use client'
 
-import {Button} from "@/components/ui/button";
+import {Button} from "@/shared/ui/registry/button";
 import {useCallback} from "react";
 import * as amplitude from '@amplitude/analytics-browser'
 
