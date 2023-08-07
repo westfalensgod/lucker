@@ -18,7 +18,7 @@ export default async function middleware(req: NextRequest) {
 
     const hostname = req.headers
         .get("host")!
-        .replace(".localhost:3000", `.${process.env.NEXT_PUBLIC_ROOT_DOMAIN}`);
+        .replace(".localhost:3001", `.${process.env.NEXT_PUBLIC_ROOT_DOMAIN}`);
 
     const path = url.pathname;
 
@@ -29,7 +29,7 @@ export default async function middleware(req: NextRequest) {
     }
 
     if (
-        hostname === "localhost:3000" ||
+        hostname === "localhost:3001" ||
         hostname === process.env.NEXT_PUBLIC_ROOT_DOMAIN
     ) {
         return NextResponse.rewrite(new URL(req.url));

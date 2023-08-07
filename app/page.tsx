@@ -1,11 +1,10 @@
-import {ExternalLink, Github, Linkedin} from "lucide-react";
+import dayjs from "dayjs";
 import {CVButton} from "@/components/cv-button";
 import {articles, projects, experience, sideProjects} from "@/lib/data";
 import {ArticleLink} from "@/components/article-link";
 import {ProjectLink} from "@/components/project-link";
 import {SocialLinks} from "@/components/social-links";
 import {PrevExperience} from "@/components/prev-experience";
-import dayjs from "dayjs";
 import {getCurrentWorkingExperience} from "@/lib/utils";
 import {ScrollArea} from "@/components/ui/scroll-area";
 
