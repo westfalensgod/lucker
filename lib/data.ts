@@ -100,7 +100,7 @@ export const sideProjects: WorkExperience[] = [
             "Spearheaded the Accounting product, conducting customer interviews, leveraging product analytics in Amplitude, monitoring conversions, and devising no-code solutions to validate hypotheses."
         ],
         startDate: new Date("February 1, 2021"),
-        endDate: new Date("June 1, 2023"),
+        endDate: new Date("June 1, 2021"),
         technologies: ["Amplitude", "Zapier", "Airtable"]
     },
     {

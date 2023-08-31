@@ -1,5 +1,5 @@
 'use client'
-import {Github, Linkedin} from "lucide-react";
+import {Github, Linkedin, Twitter} from "lucide-react";
 import * as amplitude from '@amplitude/analytics-browser'
 import {memo} from "react";
 
@@ -16,6 +16,10 @@ export const SocialLinks = memo(() => {
         <a href="https://www.linkedin.com/in/yanisneverlies/" id="linkedin" target="_blank"
            className="text-lg font-bold" onClick={handleClick}>
             <Linkedin size={20} pointerEvents="none"/>
+        </a>
+        <a href="https://x.com/yanisneverlies" id="twitter" target="_blank"
+           className="text-lg font-bold" onClick={handleClick}>
+            <Twitter size={20} pointerEvents="none"/>
         </a>
     </div>
 })
