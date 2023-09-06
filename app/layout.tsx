@@ -52,7 +52,7 @@ export default function RootLayout({
             type="image/png"
             sizes="512x512"
         />
-        <link rel="manifest" href="/manifest.json" />
+        <link rel="manifest" href="/manifest.webmanifest" />
     </head>
       <AmplitudeProvider>
         <body className={`${inter.className}`}>
