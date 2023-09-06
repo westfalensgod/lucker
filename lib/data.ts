@@ -81,14 +81,16 @@ export const experience: WorkExperience[] = [
         endDate: new Date("July 1, 2023"),
         technologies: ["TypeScript", "React", "Redux", "AWS", "Next.js"]
     },
-    // {
-    //     id: 4,
-    //     title: "Lead Frontend Engineer",
-    //     companyName: "Holland & Barrett",
-    //     description: [],
-    //     startDate: new Date("August 1, 2023"),
-    //     technologies: ["TypeScript", "React", "Next.js", "Tailwind"]
-    // }
+    {
+        id: 4,
+        title: "Lead Frontend Engineer",
+        companyName: "Holland & Barrett",
+        description: [
+            'leading a team of developers to ensure the successful implementation of frontend projects.'
+        ],
+        startDate: new Date("September 11, 2023"),
+        technologies: ["TypeScript", "React", "Next.js", "Tailwind"]
+    }
 ]
 
 export const sideProjects: WorkExperience[] = [
