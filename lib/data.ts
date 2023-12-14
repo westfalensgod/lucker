@@ -84,7 +84,7 @@ export const experience: WorkExperience[] = [
     {
         id: 4,
         title: "Lead Frontend Engineer",
-        companyName: "Holland & Barrett",
+        companyName: "Deel",
         description: [
             'leading a team of developers to ensure the successful implementation of frontend projects.'
         ],
