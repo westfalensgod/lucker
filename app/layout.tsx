@@ -1,11 +1,10 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { GeistSans } from "geist/font/sans";
 import { AmplitudeProvider } from "@/app/providers"
 import { ThemeProvider } from "@/components/theme-provider"
 import { Analytics } from "@vercel/analytics/react"
 
-const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'yanisneverlies',
@@ -18,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={GeistSans.className}>
     <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link
@@ -54,7 +53,7 @@ export default function RootLayout({
         <link rel="manifest" href="/manifest.webmanifest" />
     </head>
       <AmplitudeProvider>
-        <body className={`${inter.className}`}>
+        <body>
             <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
                 {children}
             </ThemeProvider>
