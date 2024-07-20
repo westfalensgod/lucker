@@ -3,7 +3,6 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { AmplitudeProvider } from "@/app/providers"
 import { ThemeProvider } from "@/components/theme-provider"
-import { Header } from "@/components/header"
 import { Analytics } from "@vercel/analytics/react"
 
 const inter = Inter({ subsets: ['latin'] })
@@ -57,7 +56,6 @@ export default function RootLayout({
       <AmplitudeProvider>
         <body className={`${inter.className}`}>
             <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-                <Header />
                 {children}
             </ThemeProvider>
         <Analytics />
